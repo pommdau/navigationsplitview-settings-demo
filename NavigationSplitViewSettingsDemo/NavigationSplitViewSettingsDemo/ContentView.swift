@@ -19,7 +19,7 @@ struct ContentView: View {
                 .frame(width: CGFloat(generalSettings.shapeSize), height: CGFloat(generalSettings.shapeSize))
                 .shadow(color: generalSettings.needsShapeShadow ? .black : .clear, radius: 10, x: 0, y: 10)
                 .padding(.bottom, 20)
-            Text("このあのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。")
+            Text(advancedSettings.sampleMessage)
                 .frame(width: 200)
         }
         .padding()

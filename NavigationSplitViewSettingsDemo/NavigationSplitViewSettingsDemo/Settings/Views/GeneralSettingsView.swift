@@ -45,5 +45,6 @@ struct GeneralSettingsView: View {
 struct GeneralSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         GeneralSettingsView()
+            .environmentObject(GeneralSettings())
     }
 }

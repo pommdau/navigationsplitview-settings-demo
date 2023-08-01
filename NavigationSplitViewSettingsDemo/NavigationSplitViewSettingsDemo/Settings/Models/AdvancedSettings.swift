@@ -11,15 +11,9 @@ class AdvancedSettings: ObservableObject {
     
     let settingsPaneType: SettingsPaneType = .advanced
 
-    @Published var shapeColor: Color = UserDefaults.standard.color(forKey: "color") ?? .black {
+    @Published var sampleMessage: String = UserDefaults.standard.string(forKey: "sample-message") ?? "このあのイーハトーヴォのすきとおった風" {
         didSet {
-            UserDefaults.standard.set(shapeColor, forKey: "color")
-        }
-    }
-
-    @Published var shapeSize: Float = UserDefaults.standard.float(forKey: "slider-value") {
-        didSet {
-            UserDefaults.standard.set(self.shapeSize, forKey: "slider-value")
+            UserDefaults.standard.set(sampleMessage, forKey: "sample-message")
         }
     }
 }

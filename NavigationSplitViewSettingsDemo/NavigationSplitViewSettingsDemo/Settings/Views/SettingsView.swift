@@ -31,8 +31,7 @@ struct SettingsView: View {
             case .general:
                 GeneralSettingsView()
             case .advanced:
-                GeneralSettingsView()
-//                AdvancedSettingsView()
+                AdvancedSettingsView()
             }
         }
         .onExitCommand {  // esc押下時に設定ウインドウを閉じる

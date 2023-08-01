@@ -17,6 +17,7 @@
 		DAC88A792A7910CB005B3F37 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A782A7910CB005B3F37 /* GeneralSettingsView.swift */; };
 		DAC88A7D2A791296005B3F37 /* AdvancedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A7C2A791296005B3F37 /* AdvancedSettings.swift */; };
 		DAC88A802A7912C1005B3F37 /* UserDefaults+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A7F2A7912C1005B3F37 /* UserDefaults+Color.swift */; };
+		DAC88A832A791680005B3F37 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A822A791680005B3F37 /* AdvancedSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DAC88A782A7910CB005B3F37 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		DAC88A7C2A791296005B3F37 /* AdvancedSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettings.swift; sourceTree = "<group>"; };
 		DAC88A7F2A7912C1005B3F37 /* UserDefaults+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Color.swift"; sourceTree = "<group>"; };
+		DAC88A822A791680005B3F37 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				DAC88A742A790DD9005B3F37 /* SettingsView.swift */,
 				DAC88A782A7910CB005B3F37 /* GeneralSettingsView.swift */,
+				DAC88A822A791680005B3F37 /* AdvancedSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				DAC88A752A790DD9005B3F37 /* SettingsView.swift in Sources */,
 				DAC88A612A790D63005B3F37 /* ContentView.swift in Sources */,
+				DAC88A832A791680005B3F37 /* AdvancedSettingsView.swift in Sources */,
 				DAC88A7D2A791296005B3F37 /* AdvancedSettings.swift in Sources */,
 				DAC88A792A7910CB005B3F37 /* GeneralSettingsView.swift in Sources */,
 				DAC88A802A7912C1005B3F37 /* UserDefaults+Color.swift in Sources */,
