@@ -1,6 +1,6 @@
 # navigationsplitview-settings-demo
 
-# Screen Shots
+# Screenshots
 ## View
 
 <img width="712" alt="image" src="https://github.com/pommdau/navigationsplitview-settings-demo/assets/29433103/753f7ebc-7a66-4ce5-bdb5-ba3507614f1b">
