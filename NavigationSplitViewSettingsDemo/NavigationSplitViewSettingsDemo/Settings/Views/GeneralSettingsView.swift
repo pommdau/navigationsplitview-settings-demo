@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GeneralSettingsView: View {
     
-    @EnvironmentObject var generalSettings: GeneralSettings
+    @EnvironmentObject private var generalSettings: GeneralSettings
     
     var body: some View {
         VStack {

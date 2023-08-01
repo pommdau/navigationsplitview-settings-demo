@@ -7,23 +7,6 @@
 
 import SwiftUI
 
-extension AdvancedSettings {
-    
-    private static var className: String {
-        String(describing: self)
-    }
-    
-    enum UserDefaultsKey: String, CaseIterable {
-        case shapeType
-        case sampleMessage
-        
-        // e.g. "GeneralSettings-shapeSize"
-        var key: String {
-            "\(className)-\(rawValue)"
-        }
-    }
-}
-
 class AdvancedSettings: ObservableObject {
     
     let settingsPaneType: SettingsPaneType = .advanced
@@ -34,10 +17,10 @@ class AdvancedSettings: ObservableObject {
         }
     }
     
-    @Published var sampleMessage: String =
-    UserDefaults.standard.string(forKey: UserDefaultsKey.sampleMessage.key) ?? "Press \"Command + Comma (,)\" and show preferences." {
+    @Published var message: String =
+    UserDefaults.standard.string(forKey: UserDefaultsKey.message.key) ?? "Press \"Command + Comma (,)\" and show preferences." {
         didSet {
-            UserDefaults.standard.set(sampleMessage, forKey: UserDefaultsKey.sampleMessage.key)
+            UserDefaults.standard.set(message, forKey: UserDefaultsKey.message.key)
         }
     }
 }
@@ -52,13 +35,30 @@ extension AdvancedSettings {
             case .circle:
                 return "Circle"
             case .rectangle:
-                return "Rectangle"            
+                return "Rectangle"
             }
         }
     }
 }
 
+// MARK: - UserDefaults
+
 extension AdvancedSettings {
+    
+    private static var className: String {
+        String(describing: self)
+    }
+    
+    enum UserDefaultsKey: String, CaseIterable {
+        case shapeType
+        case message
+        
+        // e.g. "GeneralSettings-shapeSize"
+        var key: String {
+            "\(className)-\(rawValue)"
+        }
+    }
+    
     // Debug用
     static func resetUserDefaults() {
         UserDefaultsKey.allCases.forEach { userDefaultsKey in

@@ -19,8 +19,8 @@ struct AdvancedSettingsView: View {
                         Text(shapeType.title).tag(shapeType)
                     }
                 }      
-                TextField("Sample Message",
-                          text: $advancedSettings.sampleMessage,
+                TextField("Message",
+                          text: $advancedSettings.message,
                           axis: .vertical)
             } header: {
                 Text("Contents")

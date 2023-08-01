@@ -49,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAA4B14B2A79390B00015E4A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DAC88A762A790FD9005B3F37 /* SettingsPaneType.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		DAC88A522A790D63005B3F37 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +98,7 @@
 		DAC88A6D2A790DAE005B3F37 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				DAC88A762A790FD9005B3F37 /* SettingsPaneType.swift */,
+				DAA4B14B2A79390B00015E4A /* General */,
 				DAC88A7A2A79122A005B3F37 /* Models */,
 				DAC88A7B2A791238005B3F37 /* Views */,
 			);

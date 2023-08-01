@@ -7,24 +7,6 @@
 
 import SwiftUI
 
-extension GeneralSettings {
-    
-    private static var className: String {
-        String(describing: self)
-    }
-    
-    enum UserDefaultsKey: String, CaseIterable {
-        case shapeColor
-        case shapeSize
-        case needsShapeShadow
-        
-        // e.g. "GeneralSettings-shapeSize"
-        var key: String {
-            "\(className)-\(rawValue)"
-        }
-    }
-}
-
 class GeneralSettings: ObservableObject {
     
     let settingsPaneType: SettingsPaneType = .general
@@ -48,7 +30,25 @@ class GeneralSettings: ObservableObject {
     }
 }
 
+// MARK: - UserDefaults
+
 extension GeneralSettings {
+    
+    private static var className: String {
+        String(describing: self)
+    }
+    
+    enum UserDefaultsKey: String, CaseIterable {
+        case shapeColor
+        case shapeSize
+        case needsShapeShadow
+        
+        // e.g. "GeneralSettings-shapeSize"
+        var key: String {
+            "\(className)-\(rawValue)"
+        }
+    }
+    
     // Debug用
     static func resetUserDefaults() {
         UserDefaultsKey.allCases.forEach { userDefaultsKey in

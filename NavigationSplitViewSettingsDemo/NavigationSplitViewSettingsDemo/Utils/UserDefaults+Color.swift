@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension UserDefaults {
+    
     func color(forKey defaultName: String) -> Color? {
         let jsonDecoder = JSONDecoder()
         guard let colorData = UserDefaults.standard.data(forKey: defaultName),
