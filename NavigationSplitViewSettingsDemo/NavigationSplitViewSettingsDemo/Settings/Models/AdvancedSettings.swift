@@ -11,9 +11,9 @@ class AdvancedSettings: ObservableObject {
     
     let settingsPaneType: SettingsPaneType = .advanced
     
-    @Published var shapeType: ShapeType = UserDefaults.standard.getEnum(forKey: "shape-type") ?? .circle {
+    @Published var shapeType: ShapeType = UserDefaults.standard.enumByString(forKey: "shape-type") ?? .circle {
         didSet {
-            UserDefaults.standard.setEnum(shapeType, forKey: "shape-type")
+            UserDefaults.standard.set(shapeType, forKey: "shape-type")
         }
     }
     

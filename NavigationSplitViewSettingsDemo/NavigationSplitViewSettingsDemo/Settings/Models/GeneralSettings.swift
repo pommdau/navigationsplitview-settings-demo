@@ -25,7 +25,7 @@ class GeneralSettings: ObservableObject {
     
     @Published var needsShapeShadow: Bool = UserDefaults.standard.bool(forKey: "needs-shape-shadow") {
         didSet {
-            UserDefaults.standard.set(shapeSize, forKey: "needs-shape-shadow")
+            UserDefaults.standard.set(needsShapeShadow, forKey: "needs-shape-shadow")
         }
     }
 }
