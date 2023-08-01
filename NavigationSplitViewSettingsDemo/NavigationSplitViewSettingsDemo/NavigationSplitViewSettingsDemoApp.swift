@@ -20,14 +20,16 @@ struct NavigationSplitViewSettingsDemoApp: App {
                 .environmentObject(generalSettings)
                 .environmentObject(advancedSettings)
                 .onDisappear {
-                    NSApplication.shared.terminate(self)
+                    NSApplication.shared.terminate(self)  // メインのウインドウが閉じたときにAppを終了させる
                 }
         }
         .windowResizability(.contentSize)  // ウインドウのサイズを固定
         
         Settings {
             SettingsView()
-                .frame(width: 600, height: 500)
+            // 縦は最小値を設定。横幅は固定。
+                .frame(minHeight: 470)
+                .frame(width: 720)
                 .environmentObject(generalSettings)
                 .environmentObject(advancedSettings)
         }
