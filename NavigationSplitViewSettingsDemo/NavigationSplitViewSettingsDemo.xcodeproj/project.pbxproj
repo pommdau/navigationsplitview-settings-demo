@@ -11,6 +11,14 @@
 		DAC88A612A790D63005B3F37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A602A790D63005B3F37 /* ContentView.swift */; };
 		DAC88A632A790D64005B3F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC88A622A790D64005B3F37 /* Assets.xcassets */; };
 		DAC88A662A790D64005B3F37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC88A652A790D64005B3F37 /* Preview Assets.xcassets */; };
+		DAC88A6F2A790DB6005B3F37 /* GeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A6E2A790DB6005B3F37 /* GeneralSettings.swift */; };
+		DAC88A752A790DD9005B3F37 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A742A790DD9005B3F37 /* SettingsView.swift */; };
+		DAC88A772A790FD9005B3F37 /* SettingsPaneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A762A790FD9005B3F37 /* SettingsPaneType.swift */; };
+		DAC88A792A7910CB005B3F37 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A782A7910CB005B3F37 /* GeneralSettingsView.swift */; };
+		DAC88A7D2A791296005B3F37 /* AdvancedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A7C2A791296005B3F37 /* AdvancedSettings.swift */; };
+		DAC88A802A7912C1005B3F37 /* UserDefaults+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A7F2A7912C1005B3F37 /* UserDefaults+Color.swift */; };
+		DAC88A832A791680005B3F37 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A822A791680005B3F37 /* AdvancedSettingsView.swift */; };
+		DAC88A852A791B79005B3F37 /* UserDefaults+enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC88A842A791B79005B3F37 /* UserDefaults+enum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		DAC88A622A790D64005B3F37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAC88A652A790D64005B3F37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DAC88A672A790D64005B3F37 /* NavigationSplitViewSettingsDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NavigationSplitViewSettingsDemo.entitlements; sourceTree = "<group>"; };
+		DAC88A6E2A790DB6005B3F37 /* GeneralSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettings.swift; sourceTree = "<group>"; };
+		DAC88A742A790DD9005B3F37 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DAC88A762A790FD9005B3F37 /* SettingsPaneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPaneType.swift; sourceTree = "<group>"; };
+		DAC88A782A7910CB005B3F37 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		DAC88A7C2A791296005B3F37 /* AdvancedSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettings.swift; sourceTree = "<group>"; };
+		DAC88A7F2A7912C1005B3F37 /* UserDefaults+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Color.swift"; sourceTree = "<group>"; };
+		DAC88A822A791680005B3F37 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
+		DAC88A842A791B79005B3F37 /* UserDefaults+enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+enum.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAA4B14B2A79390B00015E4A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DAC88A762A790FD9005B3F37 /* SettingsPaneType.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		DAC88A522A790D63005B3F37 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +76,8 @@
 		DAC88A5D2A790D63005B3F37 /* NavigationSplitViewSettingsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DAC88A7E2A7912B5005B3F37 /* Utils */,
+				DAC88A6D2A790DAE005B3F37 /* Settings */,
 				DAC88A5E2A790D63005B3F37 /* NavigationSplitViewSettingsDemoApp.swift */,
 				DAC88A602A790D63005B3F37 /* ContentView.swift */,
 				DAC88A622A790D64005B3F37 /* Assets.xcassets */,
@@ -67,6 +93,44 @@
 				DAC88A652A790D64005B3F37 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DAC88A6D2A790DAE005B3F37 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DAA4B14B2A79390B00015E4A /* General */,
+				DAC88A7A2A79122A005B3F37 /* Models */,
+				DAC88A7B2A791238005B3F37 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DAC88A7A2A79122A005B3F37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAC88A6E2A790DB6005B3F37 /* GeneralSettings.swift */,
+				DAC88A7C2A791296005B3F37 /* AdvancedSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAC88A7B2A791238005B3F37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAC88A742A790DD9005B3F37 /* SettingsView.swift */,
+				DAC88A782A7910CB005B3F37 /* GeneralSettingsView.swift */,
+				DAC88A822A791680005B3F37 /* AdvancedSettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAC88A7E2A7912B5005B3F37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DAC88A7F2A7912C1005B3F37 /* UserDefaults+Color.swift */,
+				DAC88A842A791B79005B3F37 /* UserDefaults+enum.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC88A752A790DD9005B3F37 /* SettingsView.swift in Sources */,
+				DAC88A852A791B79005B3F37 /* UserDefaults+enum.swift in Sources */,
 				DAC88A612A790D63005B3F37 /* ContentView.swift in Sources */,
+				DAC88A832A791680005B3F37 /* AdvancedSettingsView.swift in Sources */,
+				DAC88A7D2A791296005B3F37 /* AdvancedSettings.swift in Sources */,
+				DAC88A792A7910CB005B3F37 /* GeneralSettingsView.swift in Sources */,
+				DAC88A802A7912C1005B3F37 /* UserDefaults+Color.swift in Sources */,
+				DAC88A6F2A790DB6005B3F37 /* GeneralSettings.swift in Sources */,
+				DAC88A772A790FD9005B3F37 /* SettingsPaneType.swift in Sources */,
 				DAC88A5F2A790D63005B3F37 /* NavigationSplitViewSettingsDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
