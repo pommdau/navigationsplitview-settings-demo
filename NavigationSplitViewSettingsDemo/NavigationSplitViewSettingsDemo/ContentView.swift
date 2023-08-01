@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Circle()
+            shape()
                 .foregroundColor(generalSettings.shapeColor)
                 .frame(width: CGFloat(generalSettings.shapeSize), height: CGFloat(generalSettings.shapeSize))
                 .shadow(color: generalSettings.needsShapeShadow ? .black : .clear, radius: 10, x: 0, y: 10)
@@ -23,6 +23,16 @@ struct ContentView: View {
                 .frame(width: 200)
         }
         .padding()
+    }
+    
+    @ViewBuilder
+    private func shape() -> some View {
+        switch advancedSettings.shapeType {
+        case .circle:
+            Circle()
+        case .rectangle:
+            Rectangle()
+        }        
     }
 }
 

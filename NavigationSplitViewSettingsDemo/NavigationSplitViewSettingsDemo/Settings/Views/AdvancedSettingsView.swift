@@ -14,6 +14,11 @@ struct AdvancedSettingsView: View {
     var body: some View {
         Form {
             Section {
+                Picker("Shape", selection: $advancedSettings.shapeType) {
+                    ForEach(AdvancedSettings.ShapeType.allCases, id: \.self) { shapeType in
+                        Text(shapeType.title).tag(shapeType)
+                    }
+                }      
                 TextField("Sample Message",
                           text: $advancedSettings.sampleMessage,
                           axis: .vertical)
