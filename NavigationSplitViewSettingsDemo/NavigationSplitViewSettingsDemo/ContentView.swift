@@ -17,7 +17,7 @@ struct ContentView: View {
             shape()
                 .foregroundColor(generalSettings.shapeColor)
                 .frame(width: CGFloat(generalSettings.shapeSize), height: CGFloat(generalSettings.shapeSize))
-                .shadow(color: generalSettings.needsShapeShadow ? .black : .clear, radius: 10, x: 0, y: 10)
+                .shadow(color: generalSettings.needsShapeShadow ? .black : .clear, radius: 4, x: 0, y: 8)
                 .padding(.bottom, 20)
             Text(advancedSettings.sampleMessage)
                 .frame(width: 200)

@@ -34,7 +34,8 @@ class AdvancedSettings: ObservableObject {
         }
     }
     
-    @Published var sampleMessage: String = UserDefaults.standard.string(forKey: UserDefaultsKey.sampleMessage.key) ?? "Lorem ipsum dolor sit amet" {
+    @Published var sampleMessage: String =
+    UserDefaults.standard.string(forKey: UserDefaultsKey.sampleMessage.key) ?? "Press \"Command + Comma (,)\" and show preferences." {
         didSet {
             UserDefaults.standard.set(sampleMessage, forKey: UserDefaultsKey.sampleMessage.key)
         }
