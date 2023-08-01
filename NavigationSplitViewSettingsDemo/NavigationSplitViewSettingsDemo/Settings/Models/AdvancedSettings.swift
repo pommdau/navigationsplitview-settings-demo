@@ -18,7 +18,7 @@ class AdvancedSettings: ObservableObject {
     }
     
     @Published var message: String =
-    UserDefaults.standard.string(forKey: UserDefaultsKey.message.key) ?? "Press \"Command + Comma (,)\" and show preferences." {
+    UserDefaults.standard.string(forKey: UserDefaultsKey.message.key) ?? "Press \"Command + Comma (,)\" and show settings." {
         didSet {
             UserDefaults.standard.set(message, forKey: UserDefaultsKey.message.key)
         }

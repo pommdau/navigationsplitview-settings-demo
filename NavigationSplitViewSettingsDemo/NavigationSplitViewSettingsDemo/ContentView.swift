@@ -31,7 +31,7 @@ struct ContentView: View {
                 .frame(width: 200)
             
             // for Debugging
-            Button("Reset Userdefaults and quit.") {
+            Button("Reset UserDefaults and quit.") {
                 GeneralSettings.resetUserDefaults()
                 AdvancedSettings.resetUserDefaults()
                 NSApp.terminate(self)
