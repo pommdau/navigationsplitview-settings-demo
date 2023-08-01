@@ -1,4 +1,7 @@
-# navigationsplitview-settings-demo
+# NavigationSplitViewを使ったmacOSアプリの設定
+
+# Blog
+- [NavigationSplitViewを使ったmacOSアプリの設定の作成](https://qiita.com/IKEH/items/aa300913ccb126b4619e?utm_campaign=post_article&utm_medium=twitter&utm_source=twitter_share)
 
 # Screenshots
 ## View
