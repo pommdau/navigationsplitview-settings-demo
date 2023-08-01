@@ -25,22 +25,6 @@ extension GeneralSettings {
     }
 }
 
-extension GeneralSettings {
-        
-    static func setDefaultsForUserDefaults() {
-        UserDefaults.standard.register(defaults: [
-            UserDefaultsKey.shapeSize.key: 80,
-        ])
-    }
-    
-    static func resetUserDefaults() {
-        UserDefaultsKey.allCases.forEach { userDefaultsKey in
-            UserDefaults.standard.removeObject(forKey: userDefaultsKey.key)
-        }
-        setDefaultsForUserDefaults()
-    }
-}
-
 class GeneralSettings: ObservableObject {
     
     let settingsPaneType: SettingsPaneType = .general
@@ -51,7 +35,7 @@ class GeneralSettings: ObservableObject {
         }
     }
 
-    @Published var shapeSize: Float {
+    @Published var shapeSize: Float = UserDefaults.standard.float(forKey: UserDefaultsKey.shapeSize.key) {
         didSet {
             UserDefaults.standard.set(shapeSize, forKey: UserDefaultsKey.shapeSize.key)
         }
@@ -62,11 +46,13 @@ class GeneralSettings: ObservableObject {
             UserDefaults.standard.set(needsShapeShadow, forKey: UserDefaultsKey.needsShapeShadow.key)
         }
     }
-    
-    init() {
-        GeneralSettings.setDefaultsForUserDefaults()
-        
-        // 値を0にしたくないのでイニシャライザでデフォルトをセットしてから、shapeSizeの値を取り出す
-        self.shapeSize = UserDefaults.standard.float(forKey: UserDefaultsKey.shapeSize.key)
+}
+
+extension GeneralSettings {
+    // Debug用
+    static func resetUserDefaults() {
+        UserDefaultsKey.allCases.forEach { userDefaultsKey in
+            UserDefaults.standard.removeObject(forKey: userDefaultsKey.key)
+        }
     }
 }

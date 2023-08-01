@@ -21,12 +21,12 @@ struct GeneralSettingsView: View {
                     
                     Slider(
                         value: $generalSettings.shapeSize.animation(),
-                        in: 10...100,
+                        in: 0...100,
                         step: 10
                     ) {
                         Text("Size")
                     } minimumValueLabel: {
-                        Text("10")
+                        Text("0")
                     } maximumValueLabel: {
                         Text("100")
                     }
@@ -39,11 +39,7 @@ struct GeneralSettingsView: View {
                 }
             }
             .formStyle(.grouped)
-            
-            Button("Reset") {
-                GeneralSettings.resetUserDefaults()
-            }
-        }        
+        }
         .navigationTitle(generalSettings.settingsPaneType.title)
     }
 }

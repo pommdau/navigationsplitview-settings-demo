@@ -21,6 +21,14 @@ struct ContentView: View {
                 .padding(.bottom, 20)
             Text(advancedSettings.sampleMessage)
                 .frame(width: 200)
+            
+            
+            Button("Reset Userdefaults and quit.") {
+                GeneralSettings.resetUserDefaults()
+                AdvancedSettings.resetUserDefaults()
+                NSApp.terminate(self)
+            }
+            .padding(.top, 40)
         }
         .padding()
     }

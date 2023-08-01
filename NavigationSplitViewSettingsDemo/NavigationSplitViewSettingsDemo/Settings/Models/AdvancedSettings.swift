@@ -7,19 +7,36 @@
 
 import SwiftUI
 
+extension AdvancedSettings {
+    
+    private static var className: String {
+        String(describing: self)
+    }
+    
+    enum UserDefaultsKey: String, CaseIterable {
+        case shapeType
+        case sampleMessage
+        
+        // e.g. "GeneralSettings-shapeSize"
+        var key: String {
+            "\(className)-\(rawValue)"
+        }
+    }
+}
+
 class AdvancedSettings: ObservableObject {
     
     let settingsPaneType: SettingsPaneType = .advanced
     
-    @Published var shapeType: ShapeType = UserDefaults.standard.enumByString(forKey: "shape-type") ?? .circle {
+    @Published var shapeType: ShapeType = UserDefaults.standard.enumByString(forKey: UserDefaultsKey.shapeType.key) ?? .circle {
         didSet {
-            UserDefaults.standard.set(shapeType, forKey: "shape-type")
+            UserDefaults.standard.set(shapeType, forKey: UserDefaultsKey.shapeType.key)
         }
     }
     
-    @Published var sampleMessage: String = UserDefaults.standard.string(forKey: "sample-message") ?? "Lorem ipsum dolor sit amet" {
+    @Published var sampleMessage: String = UserDefaults.standard.string(forKey: UserDefaultsKey.sampleMessage.key) ?? "Lorem ipsum dolor sit amet" {
         didSet {
-            UserDefaults.standard.set(sampleMessage, forKey: "sample-message")
+            UserDefaults.standard.set(sampleMessage, forKey: UserDefaultsKey.sampleMessage.key)
         }
     }
 }
@@ -36,6 +53,15 @@ extension AdvancedSettings {
             case .rectangle:
                 return "Rectangle"            
             }
+        }
+    }
+}
+
+extension AdvancedSettings {
+    // Debug用
+    static func resetUserDefaults() {
+        UserDefaultsKey.allCases.forEach { userDefaultsKey in
+            UserDefaults.standard.removeObject(forKey: userDefaultsKey.key)
         }
     }
 }

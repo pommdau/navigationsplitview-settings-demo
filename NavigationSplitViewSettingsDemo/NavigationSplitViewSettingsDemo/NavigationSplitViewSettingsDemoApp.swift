@@ -19,6 +19,9 @@ struct NavigationSplitViewSettingsDemoApp: App {
                 .frame(width: 600, height: 400)
                 .environmentObject(generalSettings)
                 .environmentObject(advancedSettings)
+                .onDisappear {
+                    NSApplication.shared.terminate(self)
+                }
         }
         .windowResizability(.contentSize)  // ウインドウのサイズを固定
         
