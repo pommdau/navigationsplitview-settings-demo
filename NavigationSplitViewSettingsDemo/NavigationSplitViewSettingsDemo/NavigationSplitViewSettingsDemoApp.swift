@@ -16,7 +16,7 @@ struct NavigationSplitViewSettingsDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .frame(minWidth: 600, maxWidth: 600, minHeight: 400, maxHeight: 400)
+                .frame(width: 600, height: 400)
                 .environmentObject(generalSettings)
                 .environmentObject(advancedSettings)
         }
@@ -24,6 +24,7 @@ struct NavigationSplitViewSettingsDemoApp: App {
         
         Settings {
             SettingsView()
+                .frame(width: 600, height: 500)
                 .environmentObject(generalSettings)
                 .environmentObject(advancedSettings)
         }
