@@ -32,23 +32,11 @@ struct NavigationSplitViewSettingsDemoApp: App {
                 .frame(width: 720)
                 .environmentObject(generalSettings)
                 .environmentObject(advancedSettings)
-                // SettingsのNSWindowのタイトルバーを強引に隠すため、NSWindowの参照をNotificationCenterの通知で受け取る
                 .onReceive(NotificationCenter.default.publisher(for: NSWindow.didBecomeMainNotification)) { notification in
-                    if let window = notification.object as? NSWindow {
-                        // システム環境設定のようにタイトルバーを非表示にする
-                        window.titleVisibility = .hidden
-                        window.titlebarAppearsTransparent = true
-                        window.styleMask.insert(.fullSizeContentView)
-                        // 以下のようにするとタイトルバーが縦に長くなり、よりシステム環境設定ぽくなる (SettingsViewのtoolbar非表示をコメントアウトしてください)
-                        /*
-                        window.titleVisibility = .visible
-                        window.titlebarAppearsTransparent = true
-                        window.styleMask.insert(.titled)
-                        window.styleMask.insert(.fullSizeContentView)
-                        window.styleMask.insert(.unifiedTitleAndToolbar)
-                        window.toolbarStyle = .unified
-                        */
+                    guard let window = notification.object as? NSWindow else {
+                        return
                     }
+                    window.toolbarStyle = .unified
                 }
         }
     }

@@ -19,13 +19,17 @@ struct SettingsView: View {
     }
     
     var body: some View {
-        NavigationSplitView(columnVisibility: .constant(.all)) {
+//        NavigationSplitView(columnVisibility: .constant(.all)) {  // カラムを閉じない設定。 .toolbar(removing: .sidebarToggle)を使う場合に
+        NavigationSplitView {
             List(SettingsPaneType.allCases, id: \.self, selection: $selectedSettingsPane) { settingsPane in
                 NavigationLink(value: settingsPane) {
                     settingsLabel(settingsPane)
                 }
             }
-            .toolbar(.hidden, for: .windowToolbar)  // サイドバーの表示/非表示ボタンを隠す
+//            if #available(macOS 14, *) {
+//                // [toolbar\(removing:\)](https://developer.apple.com/documentation/swiftui/view/toolbar(removing:) )
+//                .toolbar(removing: .sidebarToggle)
+//            }
         } detail: {
             switch selectedSettingsPane {
             case .general:
